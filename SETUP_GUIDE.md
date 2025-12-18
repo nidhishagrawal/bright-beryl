@@ -1,4 +1,4 @@
-# 🚀 Quick Setup Guide - Bright & Byrl Jewelry Website
+# 🚀 Quick Setup Guide - Bright & Beryl Jewelry Website
 
 ## ✅ Installation Complete!
 

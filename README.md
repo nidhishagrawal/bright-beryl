@@ -1,4 +1,4 @@
-# 💎 Bright & Byrl - Luxury Jewelry E-Commerce Website
+# 💎 Bright & Beryl - Luxury Jewelry E-Commerce Website
 
 A modern, beautiful, and fully-featured jewelry e-commerce website built with **Next.js 14**, **React**, and **Tailwind CSS**.
 

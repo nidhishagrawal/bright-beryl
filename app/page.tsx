@@ -86,6 +86,47 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Gold & Diamond Website Banner */}
+      <section className="py-16 bg-gradient-to-r from-yellow-50 via-amber-50 to-yellow-50">
+        <div className="container mx-auto px-4">
+          <div className="bg-gradient-to-br from-gold-500 to-amber-600 rounded-3xl overflow-hidden shadow-2xl">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center p-8 md:p-12">
+              <div className="text-white">
+                <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full mb-6">
+                  <Sparkles className="w-4 h-4" />
+                  <span className="text-sm font-medium">Exclusive Collection</span>
+                </div>
+                <h2 className="font-serif text-4xl md:text-5xl font-bold mb-4">
+                  Discover Our Premium Gold & Diamond Collection
+                </h2>
+                <p className="text-xl text-white/90 mb-8">
+                  Experience luxury with our exclusive range of gold and diamond jewelry. Exquisite designs, certified authenticity, and timeless elegance.
+                </p>
+                <a
+                  href="https://your-gold-diamond-website.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-8 py-4 bg-white text-gold-700 rounded-full hover:bg-gray-50 transition-all hover:shadow-lg font-bold text-lg"
+                >
+                  Visit Gold & Diamond Store
+                  <ArrowRight className="w-6 h-6" />
+                </a>
+              </div>
+              
+              <div className="relative h-64 lg:h-80">
+                <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent rounded-2xl backdrop-blur-sm flex items-center justify-center">
+                  <div className="text-center">
+                    <Sparkles className="w-24 h-24 text-white/80 mx-auto mb-4" />
+                    <p className="text-white text-2xl font-bold">Premium Collection</p>
+                    <p className="text-white/80">18K Gold • Certified Diamonds</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Featured Products */}
       <section className="py-20 bg-gradient-to-b from-white to-primary-50">
         <div className="container mx-auto px-4">

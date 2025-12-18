@@ -13,7 +13,7 @@ const cormorant = Cormorant_Garamond({
 })
 
 export const metadata: Metadata = {
-  title: 'Bright & Byrl - Exquisite Jewelry',
+  title: 'Bright & Beryl - Exquisite Jewelry',
   description: 'Discover timeless elegance with our curated collection of fine jewelry',
 }
 

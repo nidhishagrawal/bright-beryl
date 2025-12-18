@@ -20,7 +20,7 @@ export default function AboutPage() {
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="font-serif text-4xl font-bold mb-6">Our Mission</h2>
             <p className="text-lg text-gray-600 leading-relaxed mb-8">
-              At Bright & Byrl, we believe that jewelry is more than just an accessory—it's a celebration of life's 
+              At Bright & Beryl, we believe that jewelry is more than just an accessory—it's a celebration of life's 
               most precious moments. Each piece we create is crafted with meticulous attention to detail, using only 
               the finest materials and ethically sourced gemstones.
             </p>
@@ -92,7 +92,7 @@ export default function AboutPage() {
             <div>
               <h2 className="font-serif text-4xl font-bold mb-6">Masterful Craftsmanship</h2>
               <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                Every piece of jewelry that bears the Bright & Byrl name is the result of countless hours of 
+                Every piece of jewelry that bears the Bright & Beryl name is the result of countless hours of 
                 skilled craftsmanship. Our master jewelers bring decades of experience and an unwavering 
                 commitment to quality.
               </p>

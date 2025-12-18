@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           {/* Brand */}
           <div>
-            <h3 className="font-serif text-2xl font-bold mb-4 text-gold-400">Bright & Byrl</h3>
+            <h3 className="font-serif text-2xl font-bold mb-4 text-gold-400">Bright & Beryl</h3>
             <p className="text-gray-400 mb-4">
               Crafting timeless elegance since 2010. Each piece tells a unique story of love and beauty.
             </p>
@@ -98,7 +98,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-2 text-gray-400">
                 <Mail className="w-5 h-5" />
-                <span>info@brightandbyrl.com</span>
+                <span>info@brightandberyl.com</span>
               </li>
             </ul>
           </div>
@@ -106,7 +106,7 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="border-t border-gray-800 pt-8 text-center text-gray-400 text-sm">
-          <p>&copy; {new Date().getFullYear()} Bright & Byrl. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Bright & Beryl. All rights reserved.</p>
           <div className="flex justify-center gap-6 mt-4">
             <Link href="#" className="hover:text-white transition-colors">
               Privacy Policy

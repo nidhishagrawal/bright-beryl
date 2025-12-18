@@ -1,18 +1,23 @@
 'use client'
 
-import { useState, useMemo } from 'react'
+import { useState, useMemo, Suspense, useEffect } from 'react'
 import { useSearchParams } from 'next/navigation'
 import ProductCard from '../components/ProductCard'
 import { products } from '../data/products'
 import { SlidersHorizontal } from 'lucide-react'
 
-export default function ShopPage() {
+function ShopContent() {
   const searchParams = useSearchParams()
   const categoryParam = searchParams.get('category')
   
   const [selectedCategory, setSelectedCategory] = useState<string>(categoryParam || 'all')
   const [sortBy, setSortBy] = useState('featured')
-  const [priceRange, setPriceRange] = useState<[number, number]>([0, 10000])
+  const [priceRange, setPriceRange] = useState<[number, number]>([0, 500000])
+
+  // Sync selectedCategory with URL parameter changes
+  useEffect(() => {
+    setSelectedCategory(categoryParam || 'all')
+  }, [categoryParam])
 
   const filteredProducts = useMemo(() => {
     let filtered = products
@@ -110,6 +115,21 @@ export default function ShopPage() {
         )}
       </div>
     </div>
+  )
+}
+
+export default function ShopPage() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-600 mx-auto mb-4"></div>
+          <p className="text-gray-600">Loading products...</p>
+        </div>
+      </div>
+    }>
+      <ShopContent />
+    </Suspense>
   )
 }
 
