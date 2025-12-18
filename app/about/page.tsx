@@ -9,7 +9,7 @@ export default function AboutPage() {
         <div className="container mx-auto px-4 text-center">
           <h1 className="font-serif text-5xl md:text-6xl font-bold mb-6">Our Story</h1>
           <p className="text-xl text-white/90 max-w-3xl mx-auto">
-            Crafting timeless elegance and celebrating life's precious moments since 2010
+            Crafting timeless elegance and celebrating life&apos;s precious moments since 2010
           </p>
         </div>
       </div>
@@ -20,7 +20,7 @@ export default function AboutPage() {
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="font-serif text-4xl font-bold mb-6">Our Mission</h2>
             <p className="text-lg text-gray-600 leading-relaxed mb-8">
-              At Bright & Beryl, we believe that jewelry is more than just an accessory—it's a celebration of life's 
+              At Bright & Beryl, we believe that jewelry is more than just an accessory—it&apos;s a celebration of life&apos;s 
               most precious moments. Each piece we create is crafted with meticulous attention to detail, using only 
               the finest materials and ethically sourced gemstones.
             </p>
