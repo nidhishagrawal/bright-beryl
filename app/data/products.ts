@@ -231,6 +231,38 @@ export const products: Product[] = [
     inStock: true,
     rating: 5.0,
     reviews: 145
+  },
+  {
+    id: 14,
+    name: "Diamond Tennis Bracelet",
+    category: "bracelets",
+    price: 350000,
+    description: "A classic tennis bracelet featuring 5 carats of brilliant-cut diamonds in platinum setting.",
+    material: "Platinum",
+    gemstone: "5ct Diamonds",
+    images: [
+      "https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=800",
+      "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=800"
+    ],
+    inStock: true,
+    rating: 5.0,
+    reviews: 145
+  },
+  {
+    id: 15,
+    name: "Diamond Tennis Bracelet",
+    category: "bracelets",
+    price: 350000,
+    description: "A classic tennis bracelet featuring 5 carats of brilliant-cut diamonds in platinum setting.",
+    material: "Platinum",
+    gemstone: "5ct Diamonds",
+    images: [
+      "https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=800",
+      "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=800"
+    ],
+    inStock: true,
+    rating: 5.0,
+    reviews: 145
   }
 ]
 
