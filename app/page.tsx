@@ -1,10 +1,13 @@
 import Link from 'next/link'
-import { ArrowRight, Sparkles, Award, Shield, Truck } from 'lucide-react'
+import { ArrowRight, Sparkles, Award, Shield, Truck, Star } from 'lucide-react'
 import ProductCard from './components/ProductCard'
 import { products } from './data/products'
 
 export default function Home() {
-  const featuredProducts = products.slice(0, 6)
+  const newLaunches = products.filter(p => p.newLaunch).slice(0, 6)
+  const featuredProducts = products.filter(p => p.featured).slice(0, 6)
+  const bestSellers = products.filter(p => p.bestSeller).slice(0, 6)
+  const pureSilver = products.filter(p => p.pureSilver).slice(0, 6)
 
   return (
     <div>
@@ -86,6 +89,186 @@ export default function Home() {
         </div>
       </section>
 
+      {/* NEW LAUNCHES Section */}
+      <section className="py-20 bg-gradient-to-b from-white to-primary-50">
+        <div className="container mx-auto px-4">
+          <div className="flex items-center justify-between mb-12">
+            <div>
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-red-100 text-red-600 rounded-full mb-4">
+                <Sparkles className="w-4 h-4" />
+                <span className="text-sm font-semibold">NEW</span>
+              </div>
+              <h2 className="font-serif text-4xl md:text-5xl font-bold mb-2">New Launches</h2>
+              <p className="text-gray-600 text-lg">Discover our latest additions to the collection</p>
+            </div>
+            <Link 
+              href="/shop"
+              className="hidden md:flex items-center gap-2 px-6 py-3 bg-primary-600 text-white rounded-full hover:bg-primary-700 transition-all font-medium"
+            >
+              View All
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+          </div>
+          
+          {newLaunches.length > 0 ? (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
+              {newLaunches.map(product => (
+                <ProductCard key={product.id} product={product} />
+              ))}
+            </div>
+          ) : (
+            <div className="text-center py-12">
+              <p className="text-gray-600">New launches coming soon!</p>
+            </div>
+          )}
+          
+          <div className="text-center md:hidden">
+            <Link 
+              href="/shop"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-primary-600 text-white rounded-full hover:bg-primary-700 transition-all font-medium"
+            >
+              View All New Launches
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* FEATURED COLLECTIONS Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="flex items-center justify-between mb-12">
+            <div>
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-gold-100 text-gold-700 rounded-full mb-4">
+                <Star className="w-4 h-4 fill-gold-600" />
+                <span className="text-sm font-semibold">FEATURED</span>
+              </div>
+              <h2 className="font-serif text-4xl md:text-5xl font-bold mb-2">Featured Collections</h2>
+              <p className="text-gray-600 text-lg">Handpicked selections of our finest pieces</p>
+            </div>
+            <Link 
+              href="/shop"
+              className="hidden md:flex items-center gap-2 px-6 py-3 bg-primary-600 text-white rounded-full hover:bg-primary-700 transition-all font-medium"
+            >
+              View All
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+          </div>
+          
+          {featuredProducts.length > 0 ? (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
+              {featuredProducts.map(product => (
+                <ProductCard key={product.id} product={product} />
+              ))}
+            </div>
+          ) : (
+            <div className="text-center py-12">
+              <p className="text-gray-600">Featured collections coming soon!</p>
+            </div>
+          )}
+          
+          <div className="text-center md:hidden">
+            <Link 
+              href="/shop"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-primary-600 text-white rounded-full hover:bg-primary-700 transition-all font-medium"
+            >
+              View All Featured
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* BEST SELLER Section */}
+      <section className="py-20 bg-gradient-to-b from-white to-primary-50">
+        <div className="container mx-auto px-4">
+          <div className="flex items-center justify-between mb-12">
+            <div>
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-100 text-green-700 rounded-full mb-4">
+                <Star className="w-4 h-4 fill-green-600" />
+                <span className="text-sm font-semibold">BEST SELLER</span>
+              </div>
+              <h2 className="font-serif text-4xl md:text-5xl font-bold mb-2">Best Sellers</h2>
+              <p className="text-gray-600 text-lg">Customer favorites and top-rated pieces</p>
+            </div>
+            <Link 
+              href="/shop"
+              className="hidden md:flex items-center gap-2 px-6 py-3 bg-primary-600 text-white rounded-full hover:bg-primary-700 transition-all font-medium"
+            >
+              View All
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+          </div>
+          
+          {bestSellers.length > 0 ? (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
+              {bestSellers.map(product => (
+                <ProductCard key={product.id} product={product} />
+              ))}
+            </div>
+          ) : (
+            <div className="text-center py-12">
+              <p className="text-gray-600">Best sellers coming soon!</p>
+            </div>
+          )}
+          
+          <div className="text-center md:hidden">
+            <Link 
+              href="/shop"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-primary-600 text-white rounded-full hover:bg-primary-700 transition-all font-medium"
+            >
+              View All Best Sellers
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* PURE SILVER Section */}
+      <section className="py-20 bg-gradient-to-br from-gray-50 to-gray-100">
+        <div className="container mx-auto px-4">
+          <div className="flex items-center justify-between mb-12">
+            <div>
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-gray-200 text-gray-700 rounded-full mb-4">
+                <Sparkles className="w-4 h-4" />
+                <span className="text-sm font-semibold">PURE SILVER</span>
+              </div>
+              <h2 className="font-serif text-4xl md:text-5xl font-bold mb-2">Pure Silver Collection</h2>
+              <p className="text-gray-600 text-lg">Elegant silver jewelry crafted to perfection</p>
+            </div>
+            <Link 
+              href="/shop"
+              className="hidden md:flex items-center gap-2 px-6 py-3 bg-gray-800 text-white rounded-full hover:bg-gray-900 transition-all font-medium"
+            >
+              View All
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+          </div>
+          
+          {pureSilver.length > 0 ? (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
+              {pureSilver.map(product => (
+                <ProductCard key={product.id} product={product} />
+              ))}
+            </div>
+          ) : (
+            <div className="text-center py-12">
+              <p className="text-gray-600">Pure silver collection coming soon!</p>
+            </div>
+          )}
+          
+          <div className="text-center md:hidden">
+            <Link 
+              href="/shop"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-gray-800 text-white rounded-full hover:bg-gray-900 transition-all font-medium"
+            >
+              View All Pure Silver
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Gold & Diamond Website Banner */}
       <section className="py-16 bg-gradient-to-r from-yellow-50 via-amber-50 to-yellow-50">
         <div className="container mx-auto px-4">
@@ -123,34 +306,6 @@ export default function Home() {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Featured Products */}
-      <section className="py-20 bg-gradient-to-b from-white to-primary-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="font-serif text-4xl md:text-5xl font-bold mb-4">Featured Collection</h2>
-            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              Explore our carefully curated selection of extraordinary pieces
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-            {featuredProducts.map(product => (
-              <ProductCard key={product.id} product={product} />
-            ))}
-          </div>
-          
-          <div className="text-center">
-            <Link 
-              href="/shop"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-primary-600 text-white rounded-full hover:bg-primary-700 transition-all hover:shadow-lg font-medium"
-            >
-              View All Products
-              <ArrowRight className="w-5 h-5" />
-            </Link>
           </div>
         </div>
       </section>
@@ -221,4 +376,3 @@ export default function Home() {
     </div>
   )
 }
-

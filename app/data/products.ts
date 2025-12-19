@@ -9,6 +9,9 @@ export interface Product {
   gemstone?: string
   images: string[]
   featured?: boolean
+  newLaunch?: boolean
+  bestSeller?: boolean
+  pureSilver?: boolean
   inStock: boolean
   rating: number
   reviews: number
@@ -29,6 +32,8 @@ export const products: Product[] = [
       "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=800"
     ],
     featured: true,
+    newLaunch: true,
+    bestSeller: true,
     inStock: true,
     rating: 4.9,
     reviews: 128
@@ -46,6 +51,7 @@ export const products: Product[] = [
       "https://images.unsplash.com/photo-1603561596112-0a132b757442?w=800"
     ],
     featured: true,
+    newLaunch: true,
     inStock: true,
     rating: 5.0,
     reviews: 94
@@ -64,6 +70,7 @@ export const products: Product[] = [
       "https://images.unsplash.com/photo-1617038220319-276d3cfab638?w=800"
     ],
     featured: true,
+    bestSeller: true,
     inStock: true,
     rating: 4.8,
     reviews: 67
@@ -81,6 +88,7 @@ export const products: Product[] = [
       "https://images.unsplash.com/photo-1611085583191-a3b181a88401?w=800"
     ],
     featured: true,
+    bestSeller: true,
     inStock: true,
     rating: 5.0,
     reviews: 156
@@ -98,6 +106,7 @@ export const products: Product[] = [
       "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?w=800"
     ],
     featured: true,
+    newLaunch: true,
     inStock: true,
     rating: 4.7,
     reviews: 89
@@ -116,6 +125,7 @@ export const products: Product[] = [
       "https://images.unsplash.com/photo-1617038220319-276d3cfab638?w=800"
     ],
     featured: true,
+    bestSeller: true,
     inStock: true,
     rating: 4.9,
     reviews: 203
@@ -132,6 +142,7 @@ export const products: Product[] = [
       "https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=800",
       "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?w=800"
     ],
+    pureSilver: true,
     inStock: true,
     rating: 4.6,
     reviews: 45
@@ -148,6 +159,7 @@ export const products: Product[] = [
       "https://images.unsplash.com/photo-1603561596112-0a132b757442?w=800",
       "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=800"
     ],
+    pureSilver: true,
     inStock: true,
     rating: 4.8,
     reviews: 112
@@ -164,6 +176,7 @@ export const products: Product[] = [
       "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=800",
       "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=800"
     ],
+    pureSilver: true,
     inStock: true,
     rating: 4.7,
     reviews: 78
