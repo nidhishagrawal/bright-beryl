@@ -53,36 +53,38 @@ export default function ProductPage() {
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20">
           {/* Images */}
-          <div>
-            <div className="relative aspect-square rounded-2xl overflow-hidden bg-gray-50 mb-4">
-              <Image
-                src={product.images[selectedImage]}
-                alt={product.name}
-                fill
-                className="object-cover"
-              />
-            </div>
-            
-            {product.images.length > 1 && (
-              <div className="grid grid-cols-4 gap-4">
-                {product.images.map((image, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setSelectedImage(index)}
-                    className={`relative aspect-square rounded-lg overflow-hidden bg-gray-50 border-2 transition-all ${
-                      selectedImage === index ? 'border-primary-600' : 'border-transparent'
-                    }`}
-                  >
-                    <Image
-                      src={image}
-                      alt={`${product.name} ${index + 1}`}
-                      fill
-                      className="object-cover"
-                    />
-                  </button>
-                ))}
+          <div className="flex justify-center lg:justify-start">
+            <div className="w-[70%]">
+              <div className="relative aspect-square rounded-2xl overflow-hidden bg-gray-50 mb-4">
+                <Image
+                  src={product.images[selectedImage]}
+                  alt={product.name}
+                  fill
+                  className="object-cover"
+                />
               </div>
-            )}
+              
+              {product.images.length > 1 && (
+                <div className="grid grid-cols-4 gap-4">
+                  {product.images.map((image, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setSelectedImage(index)}
+                      className={`relative aspect-square rounded-lg overflow-hidden bg-gray-50 border-2 transition-all ${
+                        selectedImage === index ? 'border-primary-600' : 'border-transparent'
+                      }`}
+                    >
+                      <Image
+                        src={image}
+                        alt={`${product.name} ${index + 1}`}
+                        fill
+                        className="object-cover"
+                      />
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
           </div>
 
           {/* Details */}

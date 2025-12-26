@@ -1,0 +1,74 @@
+# Bright & Beryl Jewelry E-Commerce Website
+
+## Project Overview
+This is a Next.js 14 jewelry e-commerce website built with React, TypeScript, and Tailwind CSS. The website showcases jewelry products including rings, necklaces, earrings, and bracelets.
+
+## Tech Stack
+- **Framework**: Next.js 14 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Icons**: Lucide React
+- **State Management**: React Context API (CartContext)
+
+## Project Structure
+```
+app/
+├── components/          # Reusable React components
+│   ├── Navbar.tsx       # Navigation bar with cart counter
+│   ├── Footer.tsx       # Footer with links and info
+│   └── ProductCard.tsx  # Product display card
+├── context/
+│   └── CartContext.tsx  # Shopping cart state management
+├── data/
+│   └── products.ts      # Product data and types
+├── shop/
+│   └── page.tsx         # Shop/catalog page
+├── cart/
+│   └── page.tsx         # Shopping cart page
+├── product/[id]/
+│   └── page.tsx         # Product detail pages
+├── about/
+│   └── page.tsx         # About us page
+├── layout.tsx           # Root layout with providers
+├── page.tsx             # Homepage
+└── globals.css          # Global styles
+```
+
+## Key Features
+- Product browsing and filtering by category
+- Shopping cart with session storage
+- Product detail pages with image galleries
+- Responsive design (mobile, tablet, desktop)
+- Indian Rupee (₹) pricing
+- Product categories: New Launches, Featured Collections, Best Sellers, Pure Silver
+
+## Coding Conventions
+- Use TypeScript for type safety
+- Use Tailwind CSS utility classes for styling
+- Use Lucide React for icons
+- Product data structure includes: id, name, category, price, material, gemstone, images, featured, newLaunch, bestSeller, pureSilver, inStock, rating, reviews
+- Prices are in Indian Rupees (₹) without decimals
+- Use `toLocaleString('en-IN')` for Indian number formatting
+
+## Important Notes
+- Cart uses sessionStorage (clears when browser closes)
+- Product images use Next.js Image component
+- All prices are in Indian Rupees
+- GST is 18% (Indian tax rate)
+- Free shipping threshold: ₹40,000
+- Brand name: "Bright & Beryl"
+
+## Component Patterns
+- Use 'use client' directive for client components
+- Use Link from next/link for navigation
+- Use Image from next/image for optimized images
+- Product cards use ProductCard component
+- Cart state managed via CartContext
+
+## Styling Guidelines
+- Primary colors: brown tones (primary-600, primary-700)
+- Gold accent: gold-600, gold-700
+- Use rounded-2xl for card corners
+- Use font-serif for headings (Cormorant Garamond)
+- Use font-sans for body text (Inter)
+

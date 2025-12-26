@@ -276,6 +276,25 @@ export const products: Product[] = [
     inStock: true,
     rating: 5.0,
     reviews: 145
+  },
+  {
+    id: 16,
+    name: "Teardrop chandelier earrings",
+    category: "earrings",
+    price: 85000,
+    originalPrice: 110000,
+    description: "Intricate diamond teardrop chandelier earrings sparkle on a dark textured background, accented by soft pastel florals, highlighting elegance, fine craftsmanship, and a romantic, luxurious mood.",
+    material: "",
+    gemstone: "South Sea Pearls, Diamonds",
+    images: [
+      "https://res.cloudinary.com/dnhnobmxs/image/upload/v1766488231/Elegant_Diamond_Teardrop_Earrings_on_a_Pastel_Floral_Backdrop_os1jdj.png?w=800",
+      "https://res.cloudinary.com/dnhnobmxs/image/upload/v1766488231/Elegant_Diamond_Teardrop_Earrings_on_a_Pastel_Floral_Backdrop_os1jdj.png?w=800"
+    ],
+    featured: true,
+    bestSeller: true,
+    inStock: true,
+    rating: 4.8,
+    reviews: 67
   }
 ]
 
